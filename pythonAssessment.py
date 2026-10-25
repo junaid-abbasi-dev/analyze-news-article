@@ -93,3 +93,26 @@ def count_paragraphs(text):
     return count
 
 print(f"The article has {count_paragraphs(content)} paragraphs.")
+
+
+def count_sentences(text):
+    if not text:
+        return 1
+
+    count = 0
+    current_sentence = ""
+
+    for character in text:
+        if character in ".!?":
+            if current_sentence.strip():
+                count += 1
+            current_sentence = ""
+        else:
+            current_sentence += character
+
+    if current_sentence.strip(string.punctuation + "“”‘’ \n"):
+        count += 1
+
+    return count
+
+print(f"The article has {count_sentences(content)} sentences.")
