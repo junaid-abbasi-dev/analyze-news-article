@@ -22,8 +22,8 @@ def count_specific_word(text, word):
     else:
         return count
 
-# get_word = input("Enter the word to search in article: ") 
-# print(f"The word '{get_word}' appears {count_specific_word(content, get_word)} times.") 
+search_word = "apple"
+print(f"The word '{search_word}' appears {count_specific_word(content, search_word)} times.")
 
 
 def identify_most_common_word(text):
@@ -51,7 +51,7 @@ def identify_most_common_word(text):
 
     return most_common
 
-# print(f"The most common word is '{identify_most_common_word(content)}'.")
+print(f"The most common word is '{identify_most_common_word(content)}'.")
 
 def calculate_average_word_length(text):
     if not text:
@@ -73,7 +73,7 @@ def calculate_average_word_length(text):
         average_length = 0
     return average_length
 
-# print(f"The average word length is {calculate_average_word_length(content):.2f} characters.")
+print(f"The average word length is {calculate_average_word_length(content):.2f} characters.")
 
 
 def count_paragraphs(text):
